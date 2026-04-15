@@ -36,18 +36,6 @@ h1 {
   margin-bottom: 25px;
 }
 
-.gallery {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-
-.gallery img {
-  width: 30%;
-  border-radius: 10px;
-}
-
 /* INPUTS */
 input, select {
   width: 100%;
@@ -98,21 +86,12 @@ button:hover {
   <h1>Clóch</h1>
   <div class="sub">First release. Limited access.</div>
 
-  <!-- PRODUCT IMAGES -->
-  <div class="gallery">
-    <img src="moss.png" alt="Moss Hat">
-    <img src="stone.png" alt="Stone Hat">
-    <img src="basalt.png" alt="Basalt Hat">
-  </div>
-
-  <!-- FORM -->
   <form action="https://formspree.io/f/xwvaekvw" method="POST">
 
     <input type="text" name="name" placeholder="Full name" required>
 
     <input type="email" name="email" placeholder="Email address" required>
 
-    <!-- COUNTRY DROPDOWN -->
     <select name="country" required>
       <option value="" disabled selected>Select your country</option>
       <option>Australia</option>
@@ -139,7 +118,6 @@ button:hover {
       <option>Other</option>
     </select>
 
-    <!-- COLOUR DROPDOWN -->
     <select name="colour" required>
       <option value="" disabled selected>Preferred colour</option>
       <option value="Moss">Moss</option>

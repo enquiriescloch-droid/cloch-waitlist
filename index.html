@@ -30,13 +30,20 @@ h1 {
   margin-bottom: 6px;
 }
 
+/* STRONGER HEADLINE */
 .sub {
   font-size: 14px;
   color: #aaa;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* INPUTS */
+/* PSYCHOLOGICAL TRIGGER */
+.urgency {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
 input, select {
   width: 100%;
   padding: 14px;
@@ -65,6 +72,7 @@ button {
   cursor: pointer;
   border-radius: 6px;
   text-align: center;
+  font-weight: 500;
 }
 
 button:hover {
@@ -84,40 +92,25 @@ button:hover {
 <div class="container">
 
   <h1>Clóch</h1>
-  <div class="sub">First release. Limited access.</div>
+
+  <!-- UPDATED HEADLINE -->
+  <div class="sub">First release. No restocks.</div>
+
+  <!-- URGENCY LINE -->
+  <div class="urgency">Be first. Limited release.</div>
 
   <form action="https://formspree.io/f/xwvaekvw" method="POST">
 
-    <input type="text" name="name" placeholder="Full name" required>
+    <!-- OPTIONAL NAME -->
+    <input type="text" name="name" placeholder="Full name (optional)">
 
+    <!-- REQUIRED EMAIL -->
     <input type="email" name="email" placeholder="Email address" required>
 
-    <select name="country" required>
-      <option value="" disabled selected>Select your country</option>
-      <option>Australia</option>
-      <option>Ireland</option>
-      <option>United Kingdom</option>
-      <option>United States</option>
-      <option>Canada</option>
-      <option>New Zealand</option>
-      <option>France</option>
-      <option>Germany</option>
-      <option>Netherlands</option>
-      <option>Spain</option>
-      <option>Italy</option>
-      <option>Sweden</option>
-      <option>Denmark</option>
-      <option>Norway</option>
-      <option>United Arab Emirates</option>
-      <option>Saudi Arabia</option>
-      <option>India</option>
-      <option>Singapore</option>
-      <option>Japan</option>
-      <option>South Korea</option>
-      <option>South Africa</option>
-      <option>Other</option>
-    </select>
+    <!-- OPTIONAL COUNTRY -->
+    <input type="text" name="country" placeholder="Country (optional)">
 
+    <!-- REQUIRED COLOUR -->
     <select name="colour" required>
       <option value="" disabled selected>Preferred colour</option>
       <option value="Moss">Moss</option>
@@ -125,7 +118,8 @@ button:hover {
       <option value="Basalt">Basalt</option>
     </select>
 
-    <button type="submit">Request Access</button>
+    <!-- STRONGER CTA -->
+    <button type="submit">Get Early Access</button>
 
   </form>
 

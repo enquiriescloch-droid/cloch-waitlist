@@ -30,20 +30,19 @@ h1 {
   margin-bottom: 6px;
 }
 
-/* STRONGER HEADLINE */
 .sub {
   font-size: 14px;
   color: #aaa;
   margin-bottom: 20px;
 }
 
-/* PSYCHOLOGICAL TRIGGER */
 .urgency {
   font-size: 12px;
   color: #888;
   margin-bottom: 15px;
 }
 
+/* INPUTS */
 input, select {
   width: 100%;
   padding: 14px;
@@ -53,11 +52,11 @@ input, select {
   color: white;
   font-size: 14px;
   border-radius: 6px;
+  text-align: center;
 }
 
-/* CENTER DROPDOWN TEXT */
+/* FORCE CENTER DROPDOWN TEXT */
 select {
-  text-align: center;
   text-align-last: center;
 }
 
@@ -93,24 +92,24 @@ button:hover {
 
   <h1>Clóch</h1>
 
-  <!-- UPDATED HEADLINE -->
+  <!-- STRONGER POSITIONING -->
   <div class="sub">First release. No restocks.</div>
 
-  <!-- URGENCY LINE -->
+  <!-- PSYCHOLOGICAL TRIGGER -->
   <div class="urgency">Be first. Limited release.</div>
 
   <form action="https://formspree.io/f/xwvaekvw" method="POST">
 
-    <!-- OPTIONAL NAME -->
-    <input type="text" name="name" placeholder="Full name (optional)">
+    <!-- OPTIONAL -->
+    <input type="text" name="name" placeholder="Name (optional)">
 
-    <!-- REQUIRED EMAIL -->
-    <input type="email" name="email" placeholder="Email address" required>
+    <!-- REQUIRED -->
+    <input type="email" name="email" placeholder="Email" required>
 
-    <!-- OPTIONAL COUNTRY -->
+    <!-- OPTIONAL -->
     <input type="text" name="country" placeholder="Country (optional)">
 
-    <!-- REQUIRED COLOUR -->
+    <!-- REQUIRED -->
     <select name="colour" required>
       <option value="" disabled selected>Preferred colour</option>
       <option value="Moss">Moss</option>
@@ -118,7 +117,7 @@ button:hover {
       <option value="Basalt">Basalt</option>
     </select>
 
-    <!-- STRONGER CTA -->
+    <!-- STRONG CTA -->
     <button type="submit">Get Early Access</button>
 
   </form>

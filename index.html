@@ -43,7 +43,7 @@ h1 {
 }
 
 /* INPUTS */
-input, select {
+input {
   width: 100%;
   padding: 14px;
   margin-bottom: 10px;
@@ -55,9 +55,39 @@ input, select {
   text-align: center;
 }
 
-/* FORCE CENTER DROPDOWN TEXT */
+/* SELECT WRAPPER */
+.select-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* DROPDOWN */
 select {
+  width: 100%;
+  padding: 14px 40px; /* space for arrow */
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+
+  text-align: center;
   text-align-last: center;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* CUSTOM ARROW */
+.select-wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
 }
 
 /* BUTTON */
@@ -92,32 +122,27 @@ button:hover {
 
   <h1>Clóch</h1>
 
-  <!-- STRONGER POSITIONING -->
   <div class="sub">First release. No restocks.</div>
-
-  <!-- PSYCHOLOGICAL TRIGGER -->
   <div class="urgency">Be first. Limited release.</div>
 
   <form action="https://formspree.io/f/xwvaekvw" method="POST">
 
-    <!-- OPTIONAL -->
     <input type="text" name="name" placeholder="Name (optional)">
 
-    <!-- REQUIRED -->
     <input type="email" name="email" placeholder="Email" required>
 
-    <!-- OPTIONAL -->
     <input type="text" name="country" placeholder="Country (optional)">
 
-    <!-- REQUIRED -->
-    <select name="colour" required>
-      <option value="" disabled selected>Preferred colour</option>
-      <option value="Moss">Moss</option>
-      <option value="Stone">Stone</option>
-      <option value="Basalt">Basalt</option>
-    </select>
+    <!-- COLOUR DROPDOWN -->
+    <div class="select-wrapper">
+      <select name="colour" required>
+        <option value="" disabled selected>Preferred colour</option>
+        <option value="Moss">Moss</option>
+        <option value="Stone">Stone</option>
+        <option value="Basalt">Basalt</option>
+      </select>
+    </div>
 
-    <!-- STRONG CTA -->
     <button type="submit">Get Early Access</button>
 
   </form>
